@@ -5,10 +5,12 @@ import { ConhecaTorontoComponent } from './conheca-toronto/conheca-toronto.compo
 import { ContatoComponent } from './contato/contato.component';
 import { LocaisComponent } from './locais/locais.component';
 import { ViagemComponent } from './viagem/viagem.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
-
+{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+{ path: 'dashboard', component: DashboardComponent },
 { path: 'conheca-toronto', component: ConhecaTorontoComponent },
 { path: 'contato', component: ContatoComponent },
 { path: 'locais', component: LocaisComponent}, 

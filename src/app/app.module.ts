@@ -7,6 +7,7 @@ import { ViagemComponent } from './viagem/viagem.component';
 import { ConhecaTorontoComponent } from './conheca-toronto/conheca-toronto.component';
 import { ContatoComponent } from './contato/contato.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './/app-routing.module';
     LocaisComponent,
     ViagemComponent,
     ConhecaTorontoComponent,
-    ContatoComponent
+    ContatoComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
