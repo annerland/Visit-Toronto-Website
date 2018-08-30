@@ -1,3 +1,5 @@
+
+
 <!-- barra de navegação -->
 <div class="head">
   <nav id="main-menu">
@@ -7,7 +9,7 @@
          <li class="nav-button-products"><a routerLink="/locais">Locais</a></li>
          <li class="nav-button-products"><a routerLink="/viagem">Monte seu roteiro</a></li>
          <li class="nav-button-products"><a routerLink="/contato">Contato</a></li>
-    </ul>
+        </ul>
 </nav>
 </div>
 <!-- barra de navegação -->
@@ -34,14 +36,18 @@
 
       <div *ngFor="let ponto of pontos">
           <h1>{{ponto.nome}}</h1>
+          <p><img src="{{ponto.fotos}}"></p>
           <p>{{ponto.descricao}}</p>
             <h3>Atrações Principais</h3>
-            <p><b>EdgeWalk:</b> Para os mais aventureiros, a torre propõe uma atividade repleta de adrenalina com o EdgeWalk, que é uma caminhada em sua área externa sem usar as mãos.</p>
+            <p>{{ponto.atracoes}}</p>
             <p><b>Observatórios:</b> O primeiro mirante "Look Out level" está a 346 metros do chão. O segundo "Sky Pod", a 447 metros.</p>
           <p><b>Preço:</b> {{ponto.preco}}</p>
           <p><b>Quando visitar:</b> {{ponto.quando}}</p>
           <p><b>Endereço:</b> {{ponto.endereco}}</p>
           <p><b>Tempo de Visita:</b> {{ponto.tempoMedioDeVisita}}</p>
+          <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
 
       </div>
     </div>

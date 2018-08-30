@@ -8,6 +8,7 @@ import { ConhecaTorontoComponent } from './conheca-toronto/conheca-toronto.compo
 import { ContatoComponent } from './contato/contato.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAFgM81Qz-SwfTzUsr4F51AgDj0HdN88CQ'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,9 +6,15 @@ padding: 0;
 font-family: 'Segoe UI'!important;
 line-height: 1.25rem;
 }
+agm-map {
+    height: 300px;
+}
+a:link { 
+text-decoration:none; 
+} 
 
 #main-menu .nav-bar { list-style:none; margin-top: 40px; }
-#main-menu .nav-bar li { display:inline; padding:0 10px; }
+#main-menu .nav-bar li { display:inline; padding: 0 10px; }
 
 #main-menu .nav-bar li a {
 text-decoration: none;
@@ -19,7 +25,7 @@ text-shadow: 1px 1px 1px #ccc;
 font-family: 'Segoe UI'!important;
 }
 
-h1,h3,h5 {
+h1, h3, h5 {
 line-height: 2rem;
 }
 
@@ -53,6 +59,7 @@ text-align: center;
 
 .content h4 {
 margin: 2px 0;
+color: #000;
 }
 
 .content h4 .icon {

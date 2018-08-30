@@ -2,13 +2,23 @@
 <div class="head">
   <nav id="main-menu">
     <ul class="nav-bar">
-         <li class="nav-button-home"><a routerLink="/">Home</a></li>
-         <li class="nav-button-services"><a routerLink="/conheca-toronto">Conheça Toronto</a></li>
-         <li class="nav-button-products"><a routerLink="/locais">Locais</a></li>
-         <li class="nav-button-products"><a routerLink="/viagem">Monte seu roteiro</a></li>
-         <li class="nav-button-products"><a routerLink="/contato">Contato</a></li>
+      <li class="nav-button-home">
+        <a routerLink="/">Home</a>
+      </li>
+      <li class="nav-button-services">
+        <a routerLink="/conheca-toronto">Conheça Toronto</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/locais">Locais</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/viagem">Monte seu roteiro</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/contato">Contato</a>
+      </li>
     </ul>
-</nav>
+  </nav>
 </div>
 <!-- barra de navegação -->
 
@@ -22,7 +32,7 @@
       <h1>Toronto</h1>
     </div>
     <p>O CENTRO DO CANADÁ</p>
-    </div>
+  </div>
 </div>
 <!-- Imagem e texto inicial -->
 
@@ -32,8 +42,47 @@
     <h1></h1>
     <div class="flex-container">
       <div class="section">
-      <h4>aeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</h4>
-      <p>think u better call</p>
+        <h4>Preencha o formulário</h4>
+        <form action="/my-handling-form-page" method="post">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+          </div>
+
+          <div>
+            <label for="number">Telefone:</label>
+            <input type="number" id="number" required>
+          </div>
+
+          <div>
+            <label for="name">Cidade:</label>
+            <input type="text" id="city" required>
+          </div>
+
+          <div>
+            <label for="mail">E-mail:</label>
+            <input type="email" id="mail" required>
+          </div>
+
+          <div>
+            Tipo de contato:
+            <select>
+              <option value="volvo">Dúvida</option>
+              <option value="saab">Sujestão</option>
+              <option value="opel">Reclamação</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="msg">Message:</label>
+            <textarea id="msg" required></textarea>
+          </div>
+
+          <div class="button">
+            <button type="submit">Send your message</button>
+          </div>
+
+        </form>
       </div>
     </div>
   </div>
@@ -46,10 +95,15 @@
   <div class="content">
     <h1>How to contact us?</h1>
     <div class="section">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ut aliquam purus sit amet luctus venenatis lectus. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. Placerat duis ultricies lacus sed turpis. Vitae aliquet nec ullamcorper sit amet risus nullam eget. Consequat mauris nunc congue nisi vitae suscipit tellus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Purus in mollis nunc sed. Pretium nibh ipsum consequat nisl. Nunc eget lorem dolor sed. </p>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ut aliquam purus sit amet luctus venenatis
+        lectus. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. Placerat duis ultricies lacus sed turpis.
+        Vitae aliquet nec ullamcorper sit amet risus nullam eget. Consequat mauris nunc congue nisi vitae suscipit tellus.
+        Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Purus in mollis nunc sed. Pretium nibh
+        ipsum consequat nisl. Nunc eget lorem dolor sed. </p>
     </div>
   </div>
-  
+
 </div>
 <!-- Informações Adicionais -->
 
