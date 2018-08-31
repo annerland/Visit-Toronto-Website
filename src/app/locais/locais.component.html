@@ -9,6 +9,12 @@
          <li class="nav-button-products"><a routerLink="/locais">Locais</a></li>
          <li class="nav-button-products"><a routerLink="/viagem">Monte seu roteiro</a></li>
          <li class="nav-button-products"><a routerLink="/contato">Contato</a></li>
+         <!-- <div>  
+          <input type="text"  [(ngModel)]="Filter.nome" placeholder="name">  
+          <ul>  
+            <li *ngFor="let ponto of pontos | search: searchFilter">{{ ponto.nome }}</li>  
+          </ul>  
+      </div>   -->
         </ul>
 </nav>
 </div>
@@ -33,14 +39,10 @@
   <div class="content">
     <h1></h1>
     <div class="flex-container">
-
-      <div *ngFor="let ponto of pontos">
+      <div *ngFor="let ponto of ponto">
           <h1>{{ponto.nome}}</h1>
           <p><img src="{{ponto.fotos}}"></p>
           <p>{{ponto.descricao}}</p>
-            <h3>Atrações Principais</h3>
-            <p>{{ponto.atracoes}}</p>
-            <p><b>Observatórios:</b> O primeiro mirante "Look Out level" está a 346 metros do chão. O segundo "Sky Pod", a 447 metros.</p>
           <p><b>Preço:</b> {{ponto.preco}}</p>
           <p><b>Quando visitar:</b> {{ponto.quando}}</p>
           <p><b>Endereço:</b> {{ponto.endereco}}</p>
@@ -48,7 +50,6 @@
           <agm-map [latitude]="lat" [longitude]="lng">
             <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
           </agm-map>
-
       </div>
     </div>
   </div>
@@ -59,22 +60,14 @@
 <div class="tile_hex"></div>
 <div class="how_to_contact">
   <div class="content">
-    <h1>How to contact us?</h1>
-    <div class="section">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ut aliquam purus sit amet luctus venenatis lectus. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. Placerat duis ultricies lacus sed turpis. Vitae aliquet nec ullamcorper sit amet risus nullam eget. Consequat mauris nunc congue nisi vitae suscipit tellus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Purus in mollis nunc sed. Pretium nibh ipsum consequat nisl. Nunc eget lorem dolor sed. </p>
+      <h1>Como nos contatar?</h1>
+      <div class="footer">
+          <p>Preencha nosso formulário clicando <a routerLink="/contato" id="link">aqui</a></p>
+          <p>© Toronto - O Centro do Canadá. Todos os direitos reservados.</p>
     </div>
   </div>
-  
 </div>
 <!-- Informações Adicionais -->
-
-<!-- Footer -->
-<div class="foot">
-  <div class="content">
-    footer
-  </div>
-</div>
-<!-- Footer -->
 
 
 <!-- Rota da barra de navegação pelo Angular -->

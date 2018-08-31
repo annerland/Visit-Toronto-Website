@@ -4,7 +4,7 @@ html, body {
 margin: 0;
 padding: 0;
 font-family: 'Segoe UI'!important;
-line-height: 1.25rem;
+line-height: 2.25rem;
 }
 agm-map {
     height: 300px;
@@ -12,6 +12,9 @@ agm-map {
 a:link { 
 text-decoration:none; 
 } 
+#link{
+    color:white!important;
+}
 
 #main-menu .nav-bar { list-style:none; margin-top: 40px; }
 #main-menu .nav-bar li { display:inline; padding: 0 10px; }
@@ -31,7 +34,6 @@ line-height: 2rem;
 
 .head {
     height: 3rem;
-    border-bottom: .75rem solid rgb(38,67,145);
 }
 
 .who_we_are {
@@ -103,7 +105,7 @@ text-shadow: 2px 2px rgba(0,0,0,0.25);
 background-repeat: repeat-x;
 background-position: 0 1px;
 background-size: 100px 100px;
-transform: scaleY(-1);
+transform: scaleY(0);
 height: 100px;
 background-color: rgb(38,67,145);
 }
@@ -115,7 +117,7 @@ color: black;
 }
 
 .what_we_do .flex-container {
-display: flex;
+    display: flex;
     align-items: top;
     justify-content: center;
     flex-direction: row;
@@ -130,14 +132,8 @@ width: 32%;
 
 .how_to_contact {
 background-color: rgb(38,67,145);
-color: rgb(255, 255, 255);
+color: rgb(255, 255, 255)!important;
 padding-bottom: 3rem
-}
-
-.foot {
-background-color: rgb(175,175,175);
-padding: 2rem 0 ;
-color: #909090;
 }
 
 @media only screen and (max-width: 768px) {
@@ -192,4 +188,8 @@ color: #909090;
 .what_we_do .flex-container .section {
     width: 23%;
     }
+}
+
+.footer{
+    text-align: center;
 }
