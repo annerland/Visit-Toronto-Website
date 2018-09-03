@@ -2,14 +2,29 @@
 <div class="head">
   <nav id="main-menu">
     <ul class="nav-bar">
-        <li class="nav-button-home"><a routerLink="/">Home</a></li>
-        <li class="nav-button-services"><a routerLink="/conheca-toronto">Conheça Toronto</a></li>
-        <li class="nav-button-products"><a routerLink="/locais">Locais</a></li>
-        <li class="nav-button-products"><a routerLink="/gastronomia">Gastronomia</a></li>
-        <li class="nav-button-products"><a routerLink="/hospedagem">Hospedagem</a></li>
-        <li class="nav-button-products"><a routerLink="/viagem">Eventos</a></li>
-        <li class="nav-button-products"><a routerLink="/contato">Contato</a></li>
-        <input type="text"><button>send</button>
+      <li class="nav-button-home">
+        <a routerLink="/">Home</a>
+      </li>
+      <li class="nav-button-services">
+        <a routerLink="/conheca-toronto">Conheça Toronto</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/locais">Locais</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/gastronomia">Gastronomia</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/hospedagem">Hospedagem</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/viagem">Eventos</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/contato">Contato</a>
+      </li>
+      <input type="text">
+      <button>send</button>
     </ul>
   </nav>
 </div>
@@ -30,23 +45,39 @@
 <!-- Imagem e texto inicial -->
 
 <!-- Conteúdo -->
+<div class="sidebar"></div>
 <div class="what_we_do">
   <div class="content">
-    <h1>Passeios obrigatórios</h1>
     <div class="flex-container">
+      <h1>Passeios obrigatórios</h1>
       <div *ngFor="let ponto of ponto">
         <h2>{{ponto.nome}}</h2>
-        <p><img src="{{ponto.fotos}}"></p>
+        <p>
+          <img src="{{ponto.fotos}}">
+        </p>
         <p>{{ponto.descricao}}</p>
-        <p><b>Tipo:</b> {{ponto.tipo}}</p>
-        <p><b>Preço:</b> {{ponto.preco}}</p>
-        <p><b>Quando visitar:</b> {{ponto.quando}}</p>
-        <p><b>Endereço:</b> {{ponto.endereco}}</p>
-        <p><b>Tempo de Visita:</b> {{ponto.tempoMedioDeVisita}}</p>
+        <p>
+          <b>Tipo:</b> {{ponto.tipo}}</p>
+        <p>
+          <b>Preço:</b> {{ponto.preco}}</p>
+        <p>
+          <b>Quando visitar:</b> {{ponto.quando}}</p>
+        <p>
+          <b>Endereço:</b> {{ponto.endereco}}</p>
+        <p>
+          <b>Tempo de Visita:</b> {{ponto.tempoMedioDeVisita}}</p>
         <agm-map [latitude]="lat" [longitude]="lng">
           <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
         </agm-map>
       </div>
+      </div>
+      <div class="flex-container">
+      <h1><p>CityPASS</p></h1>
+      <img src="/src/assets/torontoCityPass2.jpg">
+      <p>O Toronto CityPass é um combo de ingressos para visitar alguns lugares turísticos tradicionais em Toronto. Nele temos
+        ingressos para 5 atrações: CN Tower, Casa Loma, Ripley’s Aquarium of Canada, Royal Ontario Museum, Toronto Zoo ou Ontario Science Center.</p>
+      <p>Para um adulto o total dessas cinco atrações compradas individualmente seria $133, com o cityPASS sai aproximadamente
+        $82 com taxas. Além disso, com o cityPASS você não precisa entrar na fila de compra do ingresso em cada uma das atrações.</p>
     </div>
   </div>
 </div>
@@ -59,7 +90,9 @@
   <div class="content">
     <h1>Como nos contatar?</h1>
     <div class="footer">
-      <p>Preencha nosso formulário clicando <a routerLink="/contato" id="link">aqui</a></p>
+      <p>Preencha nosso formulário clicando
+        <a routerLink="/contato" id="link">aqui</a>
+      </p>
       <p>© Toronto - O Centro do Canadá. Todos os direitos reservados.</p>
     </div>
   </div>

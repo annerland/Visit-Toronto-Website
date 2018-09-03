@@ -1,6 +1,220 @@
+/* You can add global styles to this file, and also import other style files */
+/*Configs gerais*/
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI'!important;
+    line-height: 1.25rem;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-height: 380px;
+    }
+
+    agm-map {
+        height: 300px;
+    }
+
+    a:link { 
+    text-decoration:none; 
+    } 
+
+    #link{
+        color:white!important;
+    }
+    
+    #main-menu .nav-bar { list-style:none; margin-top: 40px; }
+    #main-menu .nav-bar li { display:inline; padding: 0 10px; }
+    
+    #main-menu .nav-bar li a {
+    text-decoration: none;
+    padding-left: 25px;
+    text-transform: uppercase;
+    color: #333;
+    text-shadow: 1px 1px 1px #ccc;
+    font-family: 'Segoe UI'!important;
+    }
+    
+    h1, h3, h5 {
+    line-height: 2rem;
+    }
+    
+    .head {
+        height: 3rem;
+    }
+    
+    .who_we_are {
+        font-family: 'Segoe UI Light';
+        background: 
+        repeat-x center bottom,
+        url(http://www.wallpaperbetter.com/wallpaper/799/962/411/canada-ontario-toronto-1080P-wallpaper.jpg) no-repeat center bottom;
+        background-size: 100px 100px, cover;
+        background-attachment: scroll, fixed;
+        color: black;
+        padding: 5rem 5rem 6rem;
+    }
+    
+    .content {
+    padding: .2rem 5rem 1rem;
+    }
+    
+    .content .section {
+    padding-right: .5rem;
+    }
+    
+    .content h1 {
+    text-align: center;
+    }
+    
+    .content h4 {
+    margin: 2px 0;
+    color: #000;
+    }
+    
+    .content h4 .icon {
+    position: relative;
+    top: 6px;
+    }
+    
+    .callout {
+    color: rgb(255,255,255);
+    }
+    
+    .callout h5 {
+    text-shadow: 2px 2px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgb(255,255,255);
+    }
+    
+    .callout .cycle h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 8rem;
+    text-shadow: 2px 2px rgba(0,0,0,0.25);
+    text-align: center;
+    margin: .5rem;
+    padding: 0;
+    display: none;
+    }
+    
+    .callout .cycle h1:nth-child(3){
+    display: block;
+    }
+    
+    .callout p {
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px rgba(0,0,0,0.25);
+    }
+    
+    .tile_hex {
+    background-repeat: repeat-x;
+    background-position: 0 1px;
+    background-size: 100px 100px;
+    transform: scaleY(0);
+    height: 100px;
+    background-color: rgb(38,67,145);
+    }
+    
+    .what_we_do {
+    background-color: rgb(255, 255, 255);
+    margin-top: -1px;
+    color: black;
+    width: 75%;
+    }
+    
+    .what_we_do .flex-container {
+        margin-right: 5em;
+        display: flex;
+        align-items: top;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+        align-content: flex-end;
+    }
+    
+    .what_we_do .flex-container .section {
+    width: 32%;
+    }
+    
+    .how_to_contact {
+    background-color: rgb(38,67,145);
+    color: rgb(255, 255, 255)!important;
+    padding-bottom: 3rem
+    }
+    
+    @media only screen and (max-width: 768px) {
+    .who_we_are {
+        background-size: 100px 100px, cover;
+        color: black;
+        padding: 1rem 1rem 5rem 1rem;
+    }
+    
+    .what_we_do .flex-container {
+        display: block;
+    }
+    
+    .what_we_do .flex-container .section {
+        width: auto;
+    }
+    
+    .content {
+        padding: .2rem 1rem;
+    }
+    .sidebar{
+        display:flex;
+        width: 50%;
+    }
+    .callout .cycle h1 {
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 4rem;
+        text-shadow: 2px 4px rgba(0,0,0,0.5);
+        margin: .5rem;
+        padding: 0;
+        }
+    }
+    
+    @media only screen and (min-width: 600px) {
+    .callout .cycle h1 {
+        font-size: 6rem;
+        }
+    }
+    
+    @media only screen and (min-width: 1200px) {
+    .who_we_are {
+        padding: 10rem 15rem 11rem;
+    }
+    .who_we_are .content {
+        padding: .2rem 2rem 1rem;
+    }
+        .content {
+        padding: .2rem 12rem;
+        }   
+        .callout .cycle h1 {
+        font-size: 8rem;
+        }
+    
+    .what_we_do .flex-container .section {
+        width: 23%;
+        }
+    }
+    
+    .footer{
+        text-align: center;
+    }
+
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    max-height: 30em;
+    margin: 18px auto;
+    max-width: 100%;
+    height: auto;
 }
+
