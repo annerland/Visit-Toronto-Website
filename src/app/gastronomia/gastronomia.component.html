@@ -10,7 +10,6 @@
       <li class="nav-button-products"><a routerLink="/viagem">Eventos</a></li>
       <li class="nav-button-products"><a routerLink="/contato">Contato</a></li>
       <input type="text"><button>send</button>
-     
     </ul>
   </nav>
 </div>
@@ -33,49 +32,14 @@
 <!-- Conteúdo -->
 <div class="what_we_do">
   <div class="content">
-    <h1></h1>
+    <h1>Gastronomia</h1>
     <div class="flex-container">
-      <div class="section">
-        <h4>Preencha o formulário</h4>
-        <form action="/my-handling-form-page" method="post">
-          <div>
-            <label for="name">Nome:</label>
-            <input type="text" id="name" required>
-          </div>
-
-          <div>
-            <label for="number">Telefone:</label>
-            <input type="number" id="number" required>
-          </div>
-
-          <div>
-            <label for="name">Cidade:</label>
-            <input type="text" id="city" required>
-          </div>
-
-          <div>
-            <label for="mail">E-mail:</label>
-            <input type="email" id="mail" required>
-          </div>
-
-          <div>
-            Tipo de contato:
-            <select>
-              <option value="volvo">Dúvida</option>
-              <option value="saab">Sujestão</option>
-              <option value="opel">Reclamação</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="msg">Message:</label>
-            <textarea id="msg" required></textarea>
-          </div>
-
-          <div class="button">
-            <button type="submit">Send your message</button>
-          </div>
-        </form>
+      <div *ngFor="let restaurante of restaurantes">
+        <h2>{{restaurante.nome}}</h2>
+        <p><img src="{{restaurante.foto}}"></p>
+        <p>{{restaurante.descricao}}</p>
+        <p><b>Endereço:</b> {{restaurante.endereco}}</p>
+        <p><b>Preço:</b> {{restaurante.preco}}</p>
       </div>
     </div>
   </div>
@@ -85,19 +49,16 @@
 <!-- Informações Adicionais -->
 <div class="tile_hex"></div>
 <div class="how_to_contact">
-  <div class="content">
-    <h1>Como nos contatar?</h1>
-    <div class="footer">
-      <p>Preencha nosso formulário clicando
-        <a routerLink="/contato" id="link">aqui</a>
-      </p>
-      <p>© Toronto - O Centro do Canadá. Todos os direitos reservados.</p>
-    </div>
+  <h1>Como nos contatar?</h1>
+  <div class="footer">
+    <p>Preencha nosso formulário clicando
+      <a routerLink="/contato" id="link">aqui</a>
+    </p>
+    <p>© Toronto - O Centro do Canadá. Todos os direitos reservados.</p>
   </div>
 
 </div>
 <!-- Informações Adicionais -->
-
 
 <!-- Rota da barra de navegação pelo Angular -->
 <router-outlet></router-outlet>

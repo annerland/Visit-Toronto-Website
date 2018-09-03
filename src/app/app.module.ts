@@ -11,6 +11,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AgmCoreModule } from '@agm/core';
 import { SearchPipe } from './search.pipe';
 import { FormsModule } from '@angular/forms';
+import { GastronomiaComponent } from './gastronomia/gastronomia.component';
+import { HospedagemComponent } from './hospedagem/hospedagem.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     ConhecaTorontoComponent,
     ContatoComponent,
     DashboardComponent,
-    SearchPipe
+    SearchPipe,
+    GastronomiaComponent,
+    HospedagemComponent
   ],
   imports: [
     BrowserModule,
