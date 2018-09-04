@@ -2,14 +2,28 @@
 <div class="head">
   <nav id="main-menu">
     <ul class="nav-bar">
-      <li class="nav-button-home"><a routerLink="/">Home</a></li>
-      <li class="nav-button-services"><a routerLink="/conheca-toronto">Conheça Toronto</a></li>
-      <li class="nav-button-products"><a routerLink="/locais">Locais</a></li>
-      <li class="nav-button-products"><a routerLink="/gastronomia">Gastronomia</a></li>
-      <li class="nav-button-products"><a routerLink="/hospedagem">Hospedagem</a></li>
-      <li class="nav-button-products"><a routerLink="/viagem">Eventos</a></li>
-      <li class="nav-button-products"><a routerLink="/contato">Contato</a></li>
-      <input type="text"><button>send</button>
+      <li class="nav-button-home">
+        <a routerLink="/">Home</a>
+      </li>
+      <li class="nav-button-services">
+        <a routerLink="/conheca-toronto">Conheça Toronto</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/locais">Locais</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/gastronomia">Gastronomia</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/hospedagem">Hospedagem</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/viagem">Eventos</a>
+      </li>
+      <li class="nav-button-products">
+        <a routerLink="/contato">Contato</a>
+      </li>
+
     </ul>
   </nav>
 </div>
@@ -36,11 +50,16 @@
     <div class="flex-container">
       <div *ngFor="let restaurante of restaurantes">
         <h2>{{restaurante.nome}}</h2>
-        <p><img src="{{restaurante.foto}}"></p>
+        <p>
+          <img src="{{restaurante.foto}}">
+        </p>
         <p>{{restaurante.descricao}}</p>
-        <p><b>Preço:</b> {{restaurante.preco}}</p>
-        <p><b>Horário de funcionamento:</b> {{restaurante.horario}}</p>
-        <p><b>Endereço:</b> {{restaurante.endereco}}</p>
+        <p>
+          <b>Preço:</b> {{restaurante.preco}}</p>
+        <p>
+          <b>Horário de funcionamento:</b> {{restaurante.horario}}</p>
+        <p>
+          <b>Endereço:</b> {{restaurante.endereco}}</p>
       </div>
     </div>
   </div>
@@ -48,16 +67,16 @@
 <!-- Conteúdo -->
 
 <!-- Informações Adicionais -->
-<div class="tile_hex"></div>
 <div class="how_to_contact">
-  <h1>Como nos contatar?</h1>
-  <div class="footer">
-    <p>Preencha nosso formulário clicando
-      <a routerLink="/contato" id="link">aqui</a>
-    </p>
-    <p>© Toronto - O Centro do Canadá. Todos os direitos reservados.</p>
+  <div class="content">
+    <h1>Como nos contatar?</h1>
+    <div class="footer">
+      <p>Preencha nosso formulário clicando
+        <a routerLink="/contato" id="link">aqui</a>
+      </p>
+      <p>© Toronto - O Centro do Canadá. Todos os direitos reservados.</p>
+    </div>
   </div>
-
 </div>
 <!-- Informações Adicionais -->
 

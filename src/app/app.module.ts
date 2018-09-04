@@ -13,7 +13,7 @@ import { SearchPipe } from './search.pipe';
 import { FormsModule } from '@angular/forms';
 import { GastronomiaComponent } from './gastronomia/gastronomia.component';
 import { HospedagemComponent } from './hospedagem/hospedagem.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +27,7 @@ import { HospedagemComponent } from './hospedagem/hospedagem.component';
     HospedagemComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({

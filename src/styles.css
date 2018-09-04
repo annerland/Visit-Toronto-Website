@@ -3,9 +3,10 @@
 html, body {
 margin: 0;
 padding: 0;
-font-family: 'Segoe UI'!important;
+font-family: 'Segoe UI';
 line-height: 1.25rem;
 }
+
 agm-map {
     height: 300px;
 }
@@ -40,7 +41,7 @@ line-height: 2rem;
     font-family: 'Segoe UI Light';
     background: 
     repeat-x center bottom,
-    url(http://www.wallpaperbetter.com/wallpaper/799/962/411/canada-ontario-toronto-1080P-wallpaper.jpg) no-repeat center bottom;
+    url('/src/assets/toronto-skyline.jpeg') no-repeat center bottom;
     background-size: 100px 100px, cover;
     background-attachment: scroll, fixed;
     color: black;
@@ -57,6 +58,7 @@ padding-right: .5rem;
 
 .content h1 {
 text-align: center;
+font-family: 'Segoe UI Light';
 }
 
 .content h4 {
@@ -101,14 +103,7 @@ text-align: center;
 text-shadow: 2px 2px rgba(0,0,0,0.25);
 }
 
-.tile_hex {
-background-repeat: repeat-x;
-background-position: 0 1px;
-background-size: 100px 100px;
-transform: scaleY(0);
-height: 100px;
-background-color: rgb(38,67,145);
-}
+
 
 .what_we_do {
 background-color: rgb(255, 255, 255);
@@ -131,7 +126,7 @@ width: 32%;
 }
 
 .how_to_contact {
-background-color: rgb(38,67,145);
+background-image: linear-gradient(#8ca0bb, #a5b4bf);
 color: rgb(255, 255, 255)!important;
 padding-bottom: 3rem
 }
@@ -153,6 +148,7 @@ padding-bottom: 3rem
 
 .content {
     padding: .2rem 1rem;
+    font-family: 'Segoe UI Light';
 }
 
 .callout .cycle h1 {
@@ -192,4 +188,5 @@ padding-bottom: 3rem
 
 .footer{
     text-align: center;
+    font-family: 'Segoe UI Light';
 }

@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ConhecaTorontoComponent implements OnInit {
 
   constructor() { }
-
+  anna = 4;
+  maxRate = 5;
   ngOnInit() {
   }
 

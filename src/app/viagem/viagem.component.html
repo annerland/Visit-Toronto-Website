@@ -1,94 +1,117 @@
 <!-- barra de navegação -->
 <div class="head">
-  <nav id="main-menu">
-    <ul class="nav-bar">
-      <li class="nav-button-home">
-        <a routerLink="/">Home</a>
-      </li>
-      <li class="nav-button-services">
-        <a routerLink="/conheca-toronto">Conheça Toronto</a>
-      </li>
-      <li class="nav-button-products">
-        <a routerLink="/locais">Locais</a>
-      </li>
-      <li class="nav-button-products">
-        <a routerLink="/gastronomia">Gastronomia</a>
-      </li>
-      <li class="nav-button-products">
-        <a routerLink="/hospedagem">Hospedagem</a>
-      </li>
-      <li class="nav-button-products">
-        <a routerLink="/viagem">Eventos</a>
-      </li>
-      <li class="nav-button-products">
-        <a routerLink="/contato">Contato</a>
-      </li>
-      <input type="text">
-      <button>send</button>
-    </ul>
-  </nav>
+<nav id="main-menu">
+<ul class="nav-bar">
+<li class="nav-button-home">
+<a routerLink="/">Home</a>
+</li>
+<li class="nav-button-services">
+<a routerLink="/conheca-toronto">Conheça Toronto</a>
+</li>
+<li class="nav-button-products">
+<a routerLink="/locais">Locais</a>
+</li>
+<li class="nav-button-products">
+<a routerLink="/gastronomia">Gastronomia</a>
+</li>
+<li class="nav-button-products">
+<a routerLink="/hospedagem">Hospedagem</a>
+</li>
+<li class="nav-button-products">
+<a routerLink="/viagem">Eventos</a>
+</li>
+<li class="nav-button-products">
+<a routerLink="/contato">Contato</a>
+</li>
+
+</ul>
+</nav>
 </div>
 <!-- barra de navegação -->
 
 <!-- Imagem e texto inicial -->
 <div class="who_we_are">
-  <div class="callout">
-    <h5>O WEB SITE OFICIAL DE TURISMO TORONTO</h5>
-    <div class="cycle">
-      <h1></h1>
-      <h1></h1>
-      <h1>Toronto</h1>
-    </div>
-    <p>O CENTRO DO CANADÁ</p>
-  </div>
+<div class="callout">
+<h5>O WEB SITE OFICIAL DE TURISMO TORONTO</h5>
+<div class="cycle">
+<h1></h1>
+<h1></h1>
+<h1>Toronto</h1>
+</div>
+<p>O CENTRO DO CANADÁ</p>
+</div>
 </div>
 <!-- Imagem e texto inicial -->
 
 <!-- Conteúdo -->
 <div class="what_we_do">
-  <div class="content">
-    <h1>Eventos e Festivais</h1>
-    <div class="flex-container">
-      <img src="/src/assets/canada-day.jpg">
-      <p>Setembro é um mês movimentado em Toronto: o clima é bom, as férias de verão terminam, as aulas começam e é um mês produtivo
-        já que equivale a março no Brasil, (as pessoas estão focadas em serem produtivas, aproveitarem os últimos dias de
-        calor e em deixar tudo organizado antes do inverno e do frio chegarem). Mas não é por ser produtivo que o mês não
-        possui vários eventos e dá sim para curtir bastante a cidade de Toronto e participar de eventos incríveis. Abaixo
-        listaremos para vocês o que vai acontecer em Toronto em setembro de 2018.</p>
+<div class="content">
+<div class="flex-container">
+<div class="blog-container">
+<div class="blog-header">
+  <h1>Eventos e Festivais</h1>
+  <img src="/src/assets/canada-day.jpg">
+  <div class="blog-cover">
+    <div class="blog-author">
+    </div>
+  </div>
+</div>
+<div class="blog-body">
+  <div class="blog-title">
+  </div>
+  <div class="blog-summary">
+      Setembro é um mês movimentado em Toronto: o clima é bom, as férias de verão terminam, as aulas começam e é um
+      mês produtivo já que equivale a março no Brasil, (as pessoas estão focadas em serem produtivas, aproveitarem
+      os últimos dias de calor e em deixar tudo organizado antes do inverno e do frio chegarem). Mas não é por ser
+      produtivo que o mês não possui vários eventos e dá sim para curtir bastante a cidade de Toronto e participar
+      de eventos incríveis. Abaixo listaremos para vocês o que vai acontecer em Toronto em setembro de 2018.
+  </div>
       <div *ngFor="let evento of eventos">
-        <h2>{{evento.nome}}</h2>
-        <img src="{{evento.foto}}">
-        <p>{{evento.descricao}}</p>
-        <p>
-          <b>Quando:</b> {{evento.quando}}</p>
-        <p>
-          <p>
-            <b>Endereço:</b> {{evento.endereco}}</p>
-          <p>
-            <b>Mais informações:</b> {{evento.infos}}</p>
+    <div class="blog-container">
+      <div class="blog-header">
+        <img class="eventos" src='{{evento.foto}}'>
+        <div class="blog-cover">
+          <div class="blog-author">
+          </div>
+        </div>
+      </div>
+      <div class="blog-body">
+        <div class="blog-title">
+          <h1>{{evento.nome}}</h1>
+        </div>
+        <div class="blog-summary">
+          <p>{{evento.descricao}}</p>
+          <p><b>Quando:</b> {{evento.quando}}</p><p>
+          <p><b>Endereço:</b> {{evento.endereco}}</p><p>
+        </div>
+        <div class="blog-tags">
+          <ul>
+            <li>
+              <a href="{{evento.infos}}">Fonte: {{evento.infos}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="blog-footer">
       </div>
     </div>
   </div>
-  <!-- Conteúdo -->
+</div>
+<!-- Conteúdo -->
 
-  <!-- Informações Adicionais -->
-  <div class="tile_hex"></div>
-  <div class="how_to_contact">
-    <div class="content">
-      <h1>Como nos contatar?</h1>
-      <div class="footer">
-        <p>Preencha nosso formulário clicando
-          <a routerLink="/contato" id="link">aqui</a>
-        </p>
-        <p>© Toronto - O Centro do Canadá. Todos os direitos reservados.</p>
-      </div>
+<!-- Informações Adicionais -->
+<div class="tile_hex"></div>
+<div class="how_to_contact">
+  <div class="content">
+    <h1>Como nos contatar?</h1>
+    <div class="footer">
+      <p>Preencha nosso formulário clicando
+        <a routerLink="/contato" id="link">aqui</a>
+      </p>
+      <p>© Toronto - O Centro do Canadá. Todos os direitos reservados.</p>
     </div>
-
   </div>
-  <!-- Informações Adicionais -->
-
-
-
-  <!-- Rota da barra de navegação pelo Angular -->
-  <router-outlet></router-outlet>
-  <!-- Rota da barra de navegação pelo Angular -->
+</div>
+<!-- Rota da barra de navegação pelo Angular -->
+<router-outlet></router-outlet>
+<!-- Rota da barra de navegação pelo Angular -->
