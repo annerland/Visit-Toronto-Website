@@ -13,7 +13,9 @@ import { SearchPipe } from './search.pipe';
 import { FormsModule } from '@angular/forms';
 import { GastronomiaComponent } from './gastronomia/gastronomia.component';
 import { HospedagemComponent } from './hospedagem/hospedagem.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
       apiKey: 'AIzaSyAFgM81Qz-SwfTzUsr4F51AgDj0HdN88CQ'
     }),
     FormsModule,
+    CommonModule
     
   ],
   providers: [],

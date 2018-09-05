@@ -1,7 +1,33 @@
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-     max-height: 380px;
-}
+.card-product .img-wrap {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    text-align: center;
+  }
+
+  .card-product .img-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .card-product .info-wrap {
+    background-color: #bdc8d4;
+    overflow: hidden;
+    padding: 15px;
+    border-top: 1px solid #eee;
+  }
+  .card-product .bottom-wrap {
+    background-color: #bdc8d4;
+    padding: 15px;
+    border-top: 1px solid rgb(225, 225, 226);
+    border-radius: 0px 0px 5px 5px;
+  }
+  
+  .label-rating { 
+    margin-right:10px;
+    color: #333;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  

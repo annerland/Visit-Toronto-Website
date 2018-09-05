@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Injectable({
   providedIn: 'root'
@@ -42,46 +44,79 @@ export class ViagemService {
     "nome": "Victoria's Mansion",
     "descricao": "1,0 km até Museu Real de Ontário ROM",
     "endereco": "68 Gloucester Street, M4Y 1L5, Toronto, Canadá",
-    "classificacao": "1",
+    "currentRate": 1,
+    "preco":"$",
+    "tipo":"hotel",
     "telefone": "+1 416-921-4625",
     "foto": ["https://media-cdn.tripadvisor.com/media/photo-s/08/13/9e/0c/victoria-s-mansion-guest.jpg"],
     "email": "information@victoriamansion.org",
   },
   {
-    "nome": "Victoria's Mansion",
-    "descricao": "1,0 km até Museu Real de Ontário ROM",
+    "nome": "The Parkdale Hostellerie",
+    "descricao": " 4,1 km até Centro da cidade",
     "endereco": "68 Gloucester Street, M4Y 1L5, Toronto, Canadá",
-    "classificacao": "1",
-    "telefone": "+1 416-921-4625",
-    "foto": ["https://media-cdn.tripadvisor.com/media/photo-s/08/13/9e/0c/victoria-s-mansion-guest.jpg"],
-    "email": "information@victoriamansion.org"
+    "tipo":"hotel",
+    "currentRate": 3,
+    "preco":"$",
+    "telefone": "+1 416-855-4606",
+    "foto": ["https://exp.cdn-hotels.com/hotels/19000000/18340000/18335600/18335527/badbd491_z.jpg"],
+    "email": "Não há emails, apenas uma página para contato http://www.theparkdale.ca/contact/"
   },
   {
-    "nome": "Victoria's Mansion",
-    "descricao": "1,0 km até Museu Real de Ontário ROM",
-    "endereco": "68 Gloucester Street, M4Y 1L5, Toronto, Canadá",
-    "classificacao": "1",
-    "telefone": "+1 416-921-4625",
-    "foto": ["https://media-cdn.tripadvisor.com/media/photo-s/08/13/9e/0c/victoria-s-mansion-guest.jpg"],
-    "email": "information@victoriamansion.org"
+    "nome": "Hotel 89 Yorkville",
+    "descricao": "0,5 km até Museu Real de Ontário ROM",
+    "endereco": "89 Avenue Rd, Toronto, ON M5R 2G3, Canadá",
+    "tipo":"hotel",
+    "currentRate": 2,
+    "preco":"$$",
+    "telefone": "+1 416-964-1220",
+    "foto": ["https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_470,q_auto,w_805/partnerimages/67/21/67215944.jpeg"],
+    "email": "N/A"
   },
   {
-    "nome": "Victoria's Mansion",
-    "descricao": "1,0 km até Museu Real de Ontário ROM",
-    "endereco": "68 Gloucester Street, M4Y 1L5, Toronto, Canadá",
-    "classificacao": "1",
-    "telefone": "+1 416-921-4625",
-    "foto": ["https://media-cdn.tripadvisor.com/media/photo-s/08/13/9e/0c/victoria-s-mansion-guest.jpg"],
-    "email": "information@victoriamansion.org"
+    "nome": "The Hazelton Hotel",
+    "descricao": "0,3 km até Museu Real de Ontário ROM",
+    "endereco": "118 Yorkville Ave, Toronto, ON M5R 1C4, Canadá",
+    "tipo":"hotel",
+    "currentRate": 5,
+    "preco":"$$$",
+    "telefone": "+1 416-963-6300",
+    "foto": ["https://www.escape2.ie/cdn/macrosites/the%20hazelton%20hotel3150_201505051353375310.jpg"],
+    "email": "reservations@thehazeltonhotel.com"
   },
   {
-    "nome": "Victoria's Mansion",
-    "descricao": "1,0 km até Museu Real de Ontário ROM",
-    "endereco": "68 Gloucester Street, M4Y 1L5, Toronto, Canadá",
-    "classificacao": "1",
-    "telefone": "+1 416-921-4625",
-    "foto": ["https://media-cdn.tripadvisor.com/media/photo-s/08/13/9e/0c/victoria-s-mansion-guest.jpg"],
-    "email": "information@victoriamansion.org"
-  }];
+    "nome": "Life Suites Luxury Downtown Condos",
+    "descricao": "1,0 km até Billy Bishop Toronto City Airport",
+    "endereco": "560 Front Street West",
+    "tipo":"Pousada",
+    "currentRate": 3,
+    "preco":"$$",
+    "telefone": "N/A",
+    "foto": ["https://r-ec.bstatic.com/images/hotel/max1024x768/495/49526560.jpg"],
+    "email": "N/A"
+  },
+  {
+    "nome": "Taigh Ice",
+    "descricao": "5,0 km até Centro da cidade",
+    "endereco": " 259 Wellesley St E, Toronto, ON M4X 1G8, Canadá",
+    "tipo":"Pousada",
+    "currentRate": 3,
+    "preco":"$$",
+    "telefone": "+1 416-876-5667 ",
+    "foto": ["https://s-ec.bstatic.com/images/hotel/max1024x768/106/106813464.jpg"],
+    "email": "N/A"
+  },
+  {
+    "nome": "The Ritz Carlton Toronto",
+    "descricao": "1,7 km até Billy Bishop Toronto City Airport",
+    "endereco": "181 Wellington Street West, M5V 3G7, Toronto, Canadá",
+    "tipo":"Hotel",
+    "currentRate": 5,
+    "preco":"$$$",
+    "telefone": "+1 416-585-2500",
+    "foto": ["https://ritzcarlton-h.assetsadobe.com/is/image/content/dam/the-ritz-carlton/hotels/usa-and-canada/ontario/toronto/guest-rooms/duplicates/RCTORON_00101_conversion.png"],
+    "email": "toronto.concierge@ritzcarlton.com"
+  }
+];
   constructor() { }
 }
