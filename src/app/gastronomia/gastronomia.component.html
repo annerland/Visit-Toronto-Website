@@ -15,7 +15,7 @@
         <a routerLink="/gastronomia">Gastronomia</a>
       </li>
       <li class="nav-button-products">
-        <a routerLink="/restaurante">Hospedagem</a>
+        <a routerLink="/hospedagem">hospedagem</a>
       </li>
       <li class="nav-button-products">
         <a routerLink="/viagem">Eventos</a>
@@ -23,7 +23,6 @@
       <li class="nav-button-products">
         <a routerLink="/contato">Contato</a>
       </li>
-
     </ul>
   </nav>
 </div>
@@ -46,29 +45,42 @@
 <!-- Conteúdo -->
 <div class="what_we_do">
   <div class="content">
-    <h1>Gastronomia</h1>
     <div class="flex-container">
-      <div *ngFor="let restaurante of restaurantes">
-        <div class="col-md-5 col-sm-5">
-          <div class="hotel-entry">
-            <img src="{{restaurante.foto}}" class="hotel-img">
-            <p class="price"><span>{{restaurante.tipo}}</span></p>
-            <div class="desc">
-              <p class="star"><span><i class="icon-star-full"></i></span>Preço: {{restaurante.preco}}</p>
-              <h3>{{restaurante.nome}}</h3>
-              <span class="place">{{restaurante.descricao}}</span>
-              <p>{{restaurante.endereco}}</p>
-              <p><b>Horário:</b> {{restaurante.horario}}</p>
+        Procurar por nome:  <input type="text" [(ngModel)]="filtertext" class="form-control" placeholder="Search">
+        Procurar por classificação: <ngb-rating max="5" [(ngModel)]="filterrate" style="color: #e5ac42;"></ngb-rating>
+        Procurar por preço:
+        <select [(ngModel)]="filterpreco">
+          <option *ngFor="let restaurante of restaurantes" [value]="preco">{{restaurante.preco}}</option>
+        </select>
+        <ul class="cards">
+        <li class="cards__item" *ngFor="let restaurante of restaurantes | search: filtertext | rate: filterrate | preco: filterpreco">
+          <div class="card">
+            <img src={{restaurante.foto}} class="card__image">
+            <div class="card__content">
+              <div class="card__title">{{restaurante.nome}}</div>
+              <p class="price">
+                <span>{{restaurante.tipo}}</span>
+                Preço: {{restaurante.preco}}
+              </p>
+              <ngb-rating max="5" [(rate)]="restaurante.currentRate" style="color: #e5ac42;"></ngb-rating>              
+              <p class="card__text">
+                <span class="place">{{restaurante.descricao}}</span>
+                <br>
+                <br>
+                <b>Endereço:</b> {{restaurante.endereco}}
+                <br>
+                <b>Telefone:</b> {{restaurante.telefone}}</p>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 <!-- Conteúdo -->
 
 <!-- Informações Adicionais -->
+
 <div class="how_to_contact">
   <div class="content">
     <h1>Como nos contatar?</h1>

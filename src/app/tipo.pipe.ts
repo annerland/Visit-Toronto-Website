@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'search'
+  name: 'tipo'
 })
-export class SearchPipe implements PipeTransform {
+export class TipoPipe implements PipeTransform {
 
   transform(values: any, args?: any): any {
     if (!args) {
@@ -12,12 +12,15 @@ export class SearchPipe implements PipeTransform {
     else {
       args = args.toUpperCase();
     }    
+
     
     return values.filter(item => {      
-      return item.nome.toUpperCase().startsWith(args) == true
+      console.log(item);
+      console.log("aaaaa")
+      return item.tipo.toUpperCase().startsWith(args) == true
+      
     })
 
   }
 
-  
 }

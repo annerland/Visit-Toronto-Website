@@ -15,6 +15,9 @@ import { GastronomiaComponent } from './gastronomia/gastronomia.component';
 import { HospedagemComponent } from './hospedagem/hospedagem.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
+import { TipoPipe } from './tipo.pipe';
+import { RatePipe } from './rate.pipe';
+import { PrecoPipe } from './preco.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { CommonModule } from '@angular/common';
     DashboardComponent,
     SearchPipe,
     GastronomiaComponent,
-    HospedagemComponent
+    HospedagemComponent,
+    TipoPipe,
+    RatePipe,
+    PrecoPipe
   ],
   imports: [
     NgbModule,

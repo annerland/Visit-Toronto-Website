@@ -1,14 +1,43 @@
 
 img {
-    display: block;
-    max-height: 30em;
-    margin: 18px auto;
-    max-width: 100%;
+    max-height: 200px;
+    max-width: 200px;
     height: auto;
+    margin: 10px;
+    position: relative;
+    text-align: center;
 }
 
 .mapa{
     width: 600px;
     height: 600px;
+}
+
+@media screen and (min-width:978px){
+	.hoc{max-width:978px;}
+}
+
+.divisao{
+    background-color: #f2f2f2;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    padding: 30px 9px 0px 16px;
+}
+h2{
+    text-align: left;
+    color: #696969;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+p{
+    padding: 8px;
+}
+p, li{
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
 }
 

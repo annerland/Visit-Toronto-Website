@@ -1,59 +1,102 @@
-@media (max-width: 375px){
+  
 
-    .col-sm-6 {
-        width: 50%;
-        }
-    }
-    .hotel-entry {
-      margin-bottom: 3em; 
-      padding: 5px 10px 0px 0px;
+/*cards*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  background-color: #f0f0f0;
+}
+body {
+  color: #999999;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cards__item {
+  display: flex;
+  padding: 1rem;
+}
+@media (min-width: 40rem) {
+  .cards__item {
+    width: 50%;
   }
-  
-  .hotel-entry .hotel-img {
-      height: 280px;
-      display: block;
-      margin-bottom: 20px;
-      position: relative; 
+}
+@media (min-width: 56rem) {
+  .cards__item {
+    width: 33.3333%;
   }
-  
-  .hotel-entry .hotel-img .price {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: #00BBF0;
-      color: #fff;
-      padding: 8px 12px;
-      margin: 0; 
+}
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card:hover .card__image {
+  filter: contrast(100%);
+}
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
   }
-  
-  .hotel-entry .hotel-img .price span {
-      font-size: 18px;
-      font-weight: 700; 
-  }
-  
-  .hotel-entry .hotel-img .price span small {
-      font-size: 16px; 
-  }
-  
-  .hotel-entry .desc h3 {
-      margin-bottom: 10px; 
-  }
-  
-  .hotel-entry .desc h3 a {
-      color: #000; 
-  }
-  
-  .hotel-entry .desc .place {
-      color: #b3b3b3;
-      font-size: 12px;
-      display: block;
-      margin-bottom: 15px; 
-  }
-  
-  .hotel-entry .desc .star {
-      margin-bottom: 10px;
-      font-size: 12px;
-      color: #b3b3b3; 
-  }
-  
-  
+}
+
+.card__title {
+  color: #696969;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}

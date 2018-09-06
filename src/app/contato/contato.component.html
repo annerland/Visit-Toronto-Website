@@ -35,47 +35,37 @@
     <h1></h1>
     <div class="flex-container">
       <div class="section">
-        <h4>Preencha o formulário</h4>
-        <form action="/my-handling-form-page" method="post">
-          <div>
-            <label for="name">Nome:</label>
-            <input type="text" id="name" required>
-          </div>
+          <h3>Fale Conosco</h3>
 
-          <div>
-            <label for="number">Telefone:</label>
-            <input type="number" id="number" required>
-          </div>
+          <div class="container">
+            <form action="/action_page.php">
+              <label>Nome</label>
+              <input type="text" placeholder="firstname lastname">
 
-          <div>
-            <label for="name">Cidade:</label>
-            <input type="text" id="city" required>
-          </div>
+              <label>Telefone</label>
+              <input type="text" placeholder="(99)9999-9999">
+          
+              <label>Email</label>
+              <input type="text" placeholder="exemplo@email.xyz">
 
-          <div>
-            <label for="mail">E-mail:</label>
-            <input type="email" id="mail" required>
+              <label>Cidade</label>
+              <input type="text" placeholder="São Paulo">
+          
+              <label >Motivo do contato:</label>
+              <select id="contato">
+                <option value="duvida">Dúvida</option>
+                <option value="sugestao">Sugestão</option>
+                <option value="reclamacao">Reclamação</option>
+              </select>
+          
+              <label>Mensagem</label>
+              <textarea placeholder="Digite sua mensagem..." style="height:200px"></textarea>
+              
+    
+              <input type="submit" value="Submit">
+            </form>
           </div>
-
-          <div>
-            Tipo de contato:
-            <select>
-              <option value="volvo">Dúvida</option>
-              <option value="saab">Sujestão</option>
-              <option value="opel">Reclamação</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="msg">Message:</label>
-            <textarea id="msg" required></textarea>
-          </div>
-
-          <div class="button">
-            <button type="submit">Send your message</button>
-          </div>
-        </form>
-      </div>
+          
     </div>
   </div>
 </div>

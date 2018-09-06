@@ -167,7 +167,7 @@ padding-bottom: 3rem
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
 .who_we_are {
     padding: 10rem 15rem 11rem;
 }
@@ -189,4 +189,8 @@ padding-bottom: 3rem
 .footer{
     text-align: center;
     font-family: 'Segoe UI Light';
+    clear: both;
+}
+.sr-only{
+    display:none;
 }

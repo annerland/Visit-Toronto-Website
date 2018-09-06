@@ -1,5 +1,3 @@
-
-
 <!-- barra de navegação -->
 <div class="head">
   <nav id="main-menu">
@@ -17,7 +15,7 @@
         <a routerLink="/gastronomia">Gastronomia</a>
       </li>
       <li class="nav-button-products">
-        <a routerLink="/hospedagem">Hospedagem</a>
+        <a routerLink="/hospedagem">hospedagem</a>
       </li>
       <li class="nav-button-products">
         <a routerLink="/viagem">Eventos</a>
@@ -48,22 +46,37 @@
 <div class="what_we_do">
   <div class="content">
     <div class="flex-container">
-      <div *ngFor="let hospedagem of hospedagens">
-        <div class="col-md-9 col-sm-9">
-          <div class="hotel-entry">
-              <img src="{{hospedagem.foto}}" class="hotel-img">
-                  <p class="price"><span>{{hospedagem.tipo}}</span></p>
-              <div class="desc">
-                  <p class="star"><span><i class="icon-star-full"></i></span>Preço: {{hospedagem.preco}}</p>
-                  <h3>{{hospedagem.nome}}</h3>
-                  <span class="place">{{hospedagem.descricao}}</span>
-                  <p>{{hospedagem.endereco}}</p>
-                  <p><b>Telefone:</b> {{hospedagem.telefone}}</p>
-                  <p><b>Email:</b> {{hospedagem.email}}</p>
-              </div>
+      Procurar por nome:
+      <input type="text" [(ngModel)]="filtertext" class="form-control" placeholder="Search"> Procurar por tipo:
+      <input type="text" [(ngModel)]="filtertipo" class="form-control" placeholder="Search"> Procurar por classificação:
+      <ngb-rating max="5" [(ngModel)]="filterrate" style="color: #e5ac42;"></ngb-rating>
+      Procurar por preço:
+      <select [(ngModel)]="filterpreco">
+        <option *ngFor="let hospedagem of hospedagens" [value]="preco">{{hospedagem.preco}}</option>
+      </select>
+
+      <ul class="cards">
+        <li class="cards__item" *ngFor="let hospedagem of hospedagens | search: filtertext | tipo: filtertipo | rate: filterrate | preco: filterpreco">
+          <div class="card">
+            <img src={{hospedagem.foto}} class="card__image">
+            <div class="card__content">
+              <div class="card__title">{{hospedagem.nome}}</div>
+              <p class="price">
+                <span>{{hospedagem.tipo}}</span>
+                <br>Preço: {{hospedagem.preco}}
+              </p>
+              <ngb-rating max="5" [(rate)]="hospedagem.currentRate" style="color: #e5ac42;"></ngb-rating>
+              <p class="card__text">
+                <span class="place">{{hospedagem.descricao}}</span>
+                <br>
+                <br>
+                <b>Endereço:</b> {{hospedagem.endereco}}
+                <br>
+                <b>Telefone:</b> {{hospedagem.telefone}}</p>
+            </div>
           </div>
-      </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

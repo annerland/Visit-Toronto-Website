@@ -1,17 +1,3 @@
-<head>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-    crossorigin="anonymous">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-</head>
-
 <!-- barra de navegação -->
 <div class="head">
   <nav id="main-menu">
@@ -60,62 +46,69 @@
 <div class="what_we_do">
   <div class="content">
     <div class="flex-container">
-      <h1>Passeios obrigatórios</h1>
-      <section class="post-content-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12">
-              <div *ngFor="let ponto of ponto">
-                <h2>{{ponto.nome}}</h2>
-                <div class="image-block">
-                  <img src="{{ponto.fotos}}" class="img-responsive">
-                </div>
-                <p>{{ponto.descricao}}</p>
-                <p><b>Tipo:</b>{{ponto.tipo}}</p>
-                <p><b>Preço:</b>{{ponto.preco}}</p>
-                <p><b>Quando Visitar:</b>{{ponto.quando}}</p>
-                <p><b>Endereço:</b>{{ponto.endereco}}</p>
-                <p><b>Tempo de Visita:</b>{{ponto.tempoMedioDeVisita}}</p>
-                <agm-map [latitude]="lat" [longitude]="lng">
-                  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-                </agm-map>
-              </div>
-              <h1>
-                <p>CityPASS</p>
-              </h1>
-              <img src="/src/assets/torontoCityPass2.jpg">
-              <p>O Toronto CityPass é um combo de ingressos para visitar alguns lugares turísticos tradicionais em Toronto.
-                Nele temos ingressos para 5 atrações: CN Tower, Casa Loma, Ripley’s Aquarium of Canada, Royal Ontario Museum,
-                Toronto Zoo ou Ontario Science Center.</p>
-              <p>Para um adulto o total dessas cinco atrações compradas individualmente seria $133, com o cityPASS sai aproximadamente
-                $82 com taxas. Além disso, com o cityPASS você não precisa entrar na fila de compra do ingresso em cada uma
-                das atrações.
+        Procurar por nome:  <input type="text" [(ngModel)]="filtertext" class="form-control" placeholder="Search">
+        Procurar por tipo:  <input type="text" [(ngModel)]="filtertipo" class="form-control" placeholder="Search">
+        Procurar por classificação: <ngb-rating max="5" [(ngModel)]="filterrate" style="color: #e5ac42;"></ngb-rating>
+        Procurar por preço:
+      <select [(ngModel)]="filterpreco">
+        <option *ngFor="let ponto of ponto" [value]="preco">{{ponto.preco}}</option>
+      </select>
+
+        <ul class="cards">
+        <li class="cards__item" *ngFor="let ponto of ponto | search: filtertext | tipo: filtertipo | rate: filterrate | preco: filterpreco">
+          <div class="card">
+            <img src={{ponto.fotos}} class="card__image">
+            <div class="card__content">
+              <div class="card__title">{{ponto.nome}}</div>
+
+              <p class="price">
+                <span>{{ponto.tipo}}</span>
+                <br>Preço: {{ponto.preco}}
               </p>
+              <ngb-rating max="5" [(rate)]="ponto.currentRate" style="color: #e5ac42;"></ngb-rating>   
+              <p class="card__text">
+                <span class="place">{{ponto.descricao}}</span>
+                <br>
+                <br>
+                <b>Quando visitar:</b> {{ponto.quando}}
+                <br>
+                <b>Endereço:</b> {{ponto.endereco}}
+                <br>
+                <b>Tempo Médio de Visita:</b> {{ponto.tempoMedioDeVisita}}</p>
             </div>
           </div>
-        </div>
-      </section>
+          <li class="cards__item">
+            <div class="card">
+              <img src="/src/assets/torontoCityPass2.jpg" class="card__image">
+              <div class="card__content" *ngFor="let citypass of citypass">
+                <div class="card__title">{{citypass.nome}}</div>
+
+                <p class="card__text">
+                  {{citypass.descricao}}
+              </div>
+            </div>
+          </li>
+      </ul>
     </div>
+  </div>
+</div>
+<!-- Conteúdo -->
 
+<!-- Informações Adicionais -->
 
-    <!-- Conteúdo -->
-
-    <!-- Informações Adicionais -->
-    <div class="tile_hex"></div>
-    <div class="how_to_contact">
-      <div class="content">
-        <h1>Como nos contatar?</h1>
-        <div class="footer">
-          <p>Preencha nosso formulário clicando
-            <a routerLink="/contato" id="link">aqui</a>
-          </p>
-          <p>© Toronto - O Centro do Canadá. Todos os direitos reservados.</p>
-        </div>
-      </div>
+<div class="how_to_contact">
+  <div class="content">
+    <h1>Como nos contatar?</h1>
+    <div class="footer">
+      <p>Preencha nosso formulário clicando
+        <a routerLink="/contato" id="link">aqui</a>
+      </p>
+      <p>© Toronto - O Centro do Canadá. Todos os direitos reservados.</p>
     </div>
-    <!-- Informações Adicionais -->
+  </div>
+</div>
+<!-- Informações Adicionais -->
 
-
-    <!-- Rota da barra de navegação pelo Angular -->
-    <router-outlet></router-outlet>
-    <!-- Rota da barra de navegação pelo Angular -->
+<!-- Rota da barra de navegação pelo Angular -->
+<router-outlet></router-outlet>
+<!-- Rota da barra de navegação pelo Angular -->

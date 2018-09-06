@@ -1,10 +1,4 @@
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}   
-
+ 
 /*cards*/
 
 *,
@@ -115,6 +109,10 @@ img {
 .card__image--history {
   background-image: url('/src/assets/toronto-historia-14.jpg');
 }
+.card__image--hospedagem {
+  background-image: url('/src/assets/hotel-toronto.jpg');
+}
+
 .card__title {
   color: #696969;
   font-size: 1.25rem;

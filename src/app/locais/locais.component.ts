@@ -15,9 +15,15 @@ export class LocaisComponent implements OnInit {
   lng: number = 79.3870568;
   ponto = [];
   restaurantes = [];
+  citypass = [];
   constructor(public Locais: LocaisService) { }
 
   ngOnInit(){
+
+    this.Locais.cityPass.forEach(citypass => {
+      this.citypass.push(citypass);
+    })
+
     console.log(this.Locais.ponto);
     this.Locais.ponto.forEach(ponto => {
         this.ponto.push(ponto);
@@ -30,6 +36,8 @@ export class LocaisComponent implements OnInit {
       this.restaurantes.push(restaurantes);
       console.log('restaurantes:');
     });
+
+
   }
 
 }
