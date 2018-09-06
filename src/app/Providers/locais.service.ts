@@ -51,10 +51,10 @@ export class LocaisService {
     "nome": "360 CN Tower Restaurant",
     "descricao": "O restaurante 360 possui uma variedade de comidas, pra vários gostos, além de sua própria adega de vinhos. Além da comida, certamente o que chama atenção é o fato do restaurante ser giratório: a cada 72 minutos ele dá uma volta completa e, o melhor de tudo, você nem sente o movimento! Se você fizer uma reserva no Restaurante 360 e consumir algum prato principal você ganha a subida até o Look Out + Glass Floor.",
     "classificacao": 4.5,
+    "preco":"$$$",
     "endereco": "290 Bremner Blvd, Toronto, ON M5V 3M9, Canadá",
     "horario":"Das 11am até as 22pm",
     "foto": ["https://i.ytimg.com/vi/aU4T-fnHE1A/maxresdefault.jpg"],
-    "preco": "O menu com preços fixos varia entre $55 e $65"
   },
   {
     "nome": "St. Lawrence Market",
@@ -63,7 +63,7 @@ export class LocaisService {
     "horario": "das 8am até as 6pm, sábado das 5am até as 5pm e fechado aos domingos.",
     "endereco": "93 Front St E, Toronto, Canadá",
     "foto": ["https://cdn.narcity.com/u/2018/03/06/bd26d9ccfc3507f66d2260905f5a791c72f42728.jpg_1200x630.jpg"],
-    "preco": "Varia de barraca para barraca"
+    "preco": "$$"
   },
   {
     "nome": "Canoe",
@@ -72,7 +72,7 @@ export class LocaisService {
     "endereco": "66 Wellington St West, Toronto, Canadá",
     "horario":"11:45am – 2:30pm para almoço, 5pm – 22:30pm para jantar",
     "foto": ["https://spguia.melhoresdestinos.com.br/system/fotos_local/fotos/24317/show/canoe.jpg"],
-    "preco": "$33 almoço | $53 jantar"
+    "preco": "$$$"
   },
   {
     "nome": "Chiado",
@@ -81,7 +81,7 @@ export class LocaisService {
     "endereco": "864 College Street, Toronto, Canadá",
     "horario":"segundas a sextas 12:00 – 2:30pm para almoço, todos os dias 5pm – 10pm para jantar",
     "foto": ["http://4.bp.blogspot.com/-bWa7XEF9WRw/Tl1-Q8x5LLI/AAAAAAAABQI/2IRikJdnnyw/s1600/Chiado+%25283%2529.JPG"],
-    "preco": "Variações entre $7 e $50."
+    "preco": "$$"
   }
   ];
 

@@ -15,7 +15,7 @@
         <a routerLink="/gastronomia">Gastronomia</a>
       </li>
       <li class="nav-button-products">
-        <a routerLink="/hospedagem">Hospedagem</a>
+        <a routerLink="/restaurante">Hospedagem</a>
       </li>
       <li class="nav-button-products">
         <a routerLink="/viagem">Eventos</a>
@@ -49,17 +49,19 @@
     <h1>Gastronomia</h1>
     <div class="flex-container">
       <div *ngFor="let restaurante of restaurantes">
-        <h2>{{restaurante.nome}}</h2>
-        <p>
-          <img src="{{restaurante.foto}}">
-        </p>
-        <p>{{restaurante.descricao}}</p>
-        <p>
-          <b>Preço:</b> {{restaurante.preco}}</p>
-        <p>
-          <b>Horário de funcionamento:</b> {{restaurante.horario}}</p>
-        <p>
-          <b>Endereço:</b> {{restaurante.endereco}}</p>
+        <div class="col-md-5 col-sm-5">
+          <div class="hotel-entry">
+            <img src="{{restaurante.foto}}" class="hotel-img">
+            <p class="price"><span>{{restaurante.tipo}}</span></p>
+            <div class="desc">
+              <p class="star"><span><i class="icon-star-full"></i></span>Preço: {{restaurante.preco}}</p>
+              <h3>{{restaurante.nome}}</h3>
+              <span class="place">{{restaurante.descricao}}</span>
+              <p>{{restaurante.endereco}}</p>
+              <p><b>Horário:</b> {{restaurante.horario}}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

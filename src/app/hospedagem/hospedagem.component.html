@@ -1,3 +1,5 @@
+
+
 <!-- barra de navegação -->
 <div class="head">
   <nav id="main-menu">
@@ -47,28 +49,20 @@
   <div class="content">
     <div class="flex-container">
       <div *ngFor="let hospedagem of hospedagens">
-        <div class="col-md-4">
-          <figure class="card card-product">
-            <div class="img-wrap">
-              <img src="{{hospedagem.foto}}"> </div>
-            <figcaption class="info-wrap">
-              <h4 class="title">{{hospedagem.nome}}</h4>
-              <p class="desc">{{hospedagem.descricao}}</p>
-              <div class="rating-wrap">
-                <div class="label-rating">
-                  <ngb-rating [(rate)]="currentRate"></ngb-rating>
-                  <hr>
-                  <pre>Rate: <b>{{hospedagem.currentRate}}</b></pre>
-                </div>
+        <div class="col-md-9 col-sm-9">
+          <div class="hotel-entry">
+              <img src="{{hospedagem.foto}}" class="hotel-img">
+                  <p class="price"><span>{{hospedagem.tipo}}</span></p>
+              <div class="desc">
+                  <p class="star"><span><i class="icon-star-full"></i></span>Preço: {{hospedagem.preco}}</p>
+                  <h3>{{hospedagem.nome}}</h3>
+                  <span class="place">{{hospedagem.descricao}}</span>
+                  <p>{{hospedagem.endereco}}</p>
+                  <p><b>Telefone:</b> {{hospedagem.telefone}}</p>
+                  <p><b>Email:</b> {{hospedagem.email}}</p>
               </div>
-            </figcaption>
-            <div class="bottom-wrap">
-              <div class="price-wrap h5">
-                <span class="price-new">$1280</span>
-              </div>
-            </div>
-          </figure>
-        </div>
+          </div>
+      </div>
       </div>
     </div>
   </div>

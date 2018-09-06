@@ -60,7 +60,7 @@ export class ViagemService {
     "preco":"$",
     "telefone": "+1 416-855-4606",
     "foto": ["https://exp.cdn-hotels.com/hotels/19000000/18340000/18335600/18335527/badbd491_z.jpg"],
-    "email": "Não há emails, apenas uma página para contato http://www.theparkdale.ca/contact/"
+    "email": "N/A"
   },
   {
     "nome": "Hotel 89 Yorkville",
@@ -116,7 +116,18 @@ export class ViagemService {
     "telefone": "+1 416-585-2500",
     "foto": ["https://ritzcarlton-h.assetsadobe.com/is/image/content/dam/the-ritz-carlton/hotels/usa-and-canada/ontario/toronto/guest-rooms/duplicates/RCTORON_00101_conversion.png"],
     "email": "toronto.concierge@ritzcarlton.com"
-  }
+  },
+  {
+    "nome": "Toronto Marriott City Centre Hotel",
+    "descricao": "1,2 km até Billy Bishop Toronto City Airport",
+    "endereco": "One Blue Jays Way, M5V 1J4, Toronto, Canadá",
+    "tipo":"Hotel",
+    "currentRate": 4,
+    "preco":"$$",
+    "telefone": "+1 416-341-7100",
+    "foto": ["https://media-cdn.tripadvisor.com/media/photo-s/13/c7/82/6b/exterior.jpg"],
+    "email": "N/A"
+  },
 ];
   constructor() { }
 }
